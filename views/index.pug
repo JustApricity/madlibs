@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method ="POST" action="/story" id="words")
+    function generateStory1(formData){
+      return `Today is a ${formData.noun1}. I was walking home from school and I saw that ${formData.adjective1} cat who ${formData.verb1} over to me.`
+}
+
+    label(for="storyChoice") Choose One
+    select(form="words" name="storyChoice" id="storyChoice")
+      option(value = "1") Story 1
+      option(value = "2") Story 2
+      option(value = "3") Story 3
+    br
+    button(type="submit" form="words") Tell me a Story
+
+// Adjectives: 14
+// Plural Nouns: 7
+// Nouns: 13
+// Verbs: 2
+// Part of The Body: 1
+// Celebrity: 1
+// Article of Clothing: 2
+// Type of Liquid: 2
+// Animal: 1
+// Type of Food: 1
+// A Place: 1
